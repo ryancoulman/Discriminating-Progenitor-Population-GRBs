@@ -1,6 +1,6 @@
 # Overview
 
-The aim of my final year university project was to computationally discrimate the progenitor population of long and short gamma-ray bursts (GRBs) using their lightcurve alone.
+The aim of my final year university project was to computationally discrimnate the progenitor population of long and short gamma-ray bursts (GRBs) using their lightcurve alone.
 
 achived 81% 
 
