@@ -3,20 +3,17 @@
 The aim of my final year university project was to computationally classify the progenitor population of long and short gamma-ray bursts (GRBs) using their lightcurve (LC) alone. the method required using `pandas` dataframes to store the LC in order to compute a mathmatical fnction termed a Haar scalorgarm,
 
 $$
-   \sigma_{\Delta t}^{2} = \frac{\Delta t}{t}\sum\limits_{i=0}^{t/2\Delta t -1}h^{2}_{i, \Delta t},
+\sigma_{\Delta t}^{2} = \frac{\Delta t}{t}\sum\limits_{i=0}^{t/2\Delta t -1}h^{2}_{i, \Delta t},
 $$
 
-where, 
+where,
 
 $$
-   h_{i, \Delta t} = \overline{X}_{2i+1, \Delta t} - \overline{X}_{2i, \Delta t},
+h_{i, \Delta t} = \overline{X}_{2i+1, \Delta t} - \overline{X} _{2i, \Delta t},
 $$
 
-and, 
+and,
 
-$$
-   \overline{X}_{i, \Delta t} = \frac{1}{\Delta t}\sum\limits_{j=0}^{\Delta t - 1}X_{i\Delta t + j}.
-$$
 
 achived 81% 
 
