@@ -18,40 +18,53 @@ and where $\overline{X}$ is the average natural logarithm of the flux over ∆t 
 
 The early work analysing the MVT presented in this project provides a promising avenue for discriminating the progenitor source of GRBs, and is currently undergoing further validation for potential publication. This project also received a mark of 80%. 
 
-# *Project Abstract*
-
-*The recent detection of the long-duration, merger originating GRB211211A and GRB230307A has sparked a renewed interest in means to discriminate the progenitor population of GRBs based on their gamma-ray light curve alone. Traditional classification schemes, reliant solely on temporal and spectral properties to group GRBs into long and short bursts associated with stellar collapse and compact binary mergers, respectively, have proven inadequate in accurately discerning these anomalous GRBs. Building upon previous work, we utilise Haar wavelets to measure the variability of the bulk emission and systematically apply the technique in a novel manner to pulses preceding the main event, termed precursors. We find the former analysis of the prompt emission unable to disseminate the anomalous population, whereas the latter study of precursors correctly demonstrates clustering of the anomalies with the short merger population. Therefore, by utilising precursors, our work aids in the accurate classification of GRBs, which is essential for leveraging these bursts to understand star formation, metal enrichment, and the universe’s evolution.*
-
-## Features
-
-- **Object-Orientatied Programming :** Calculates Bessel functions of the first kind $J_{m}(x)$ for orders $m = 0$ to $m = 9$.
-- **Error handling:** Generates high-precision values suitable for scientific and engineering applications.
-- **Tabular Data Output:** Outputs results in a tabular format for easy analysis and interpretation.
-
 ## Key Concepts Demonstrated
 
-- **Object-Orientatied Programming:** Utilises functional C programming for mathematical calculations.
-- **Error Handling:** Implements the CTR to approximate the integral to a high degree of accuracy using $N = 10,000$ sub-intervals.
-- **Handling Data-Sets:** using **Pandas** 
-- **Pandas, Numpy, Matplotlib, Scipy:** Develops efficient algorithms to perform complex mathematical computations.
-- **Web-Scraping:** Once calcuated, samples the Bessel function at varied m and x values using a smaller N to verify the precision to the number of decimal places rquested by the user, improving computational efficiency by reducing N when possible if the output is unchanged.
-- **Parralel-Core Processing:**
-
+- **Data Manipulation with Pandas:** Utilises pandas for efficient handling, filtering, and transformation of large datasets (up to 1 million rows).
+- **UNIX Command-Line Tools:** Frequent use of UNIX commands to download GRBs and implemented a Bash script to automate the process for a array of GRB names. 
+- **Scientific Computing with NumPy:** Employs NumPy for numerical calculations, array operations, and fitting of polynomials.
+- **Matplotlib for Data Visualization:**  Uses Matplotlib extensively for plotting data.
+- **Parallel Processing:** Implements joblib's Parallel library for parallel computations, significantly reducing processing time.
+- **File Handling and OS Operations:** Deploys the `os` module for handling file operations and navigating the file system.
+- **Web Scraping with BeautifulSoup:** Uses requests and BeautifulSoup for extracting data from the *Swift* database to automatuically extract the duration of a given GRB 
+- **Polynomial Fitting and Derivatives:** Fits polynomial models to data and analyzes their derivatives to find critical points.
+- **Error Propagation:** Calculates and includes error propagation in Haar Scalogram calculations.
+- **Data Export:** Manages data export to csv, txt, and xlsx files for later use or analysis.
+- **Statistical Analysis:** Conducts statistical analysis of findings using the spearmanr class from `SciPy`
+- **Astropy:** Uses Astropy for handling FITS files and performing specific astronomical calculations.
 
 ## Code Overview
 
-### Main Program (`main.c`)
+### Neccassary set of functions and classes (`mvt_functions.py`)
 
-- Defines and initializes necessary variables and constants.
-- Computes Bessel functions for orders $m = 0$ to $m = 9$.
-- Outputs the results in a structured tabular format to `Bessel_Output.txt`.
+- Contains all functions essential for reading light curve files, calculating the MVT, and processing data
+- Reading and sorting GRB light curve files.
+- Extracting and processing GRB names and dates.
+- Error handling and parallel processing using joblib.
+- Implementing statistical models and fitting data using scipy and astropy.
 
-### Output File (`Bessel_Output.txt`)
+## Main program (`main.ipynb`)
 
-- Contains computed Bessel function values for $x$ ranging from 0 to 99.
-- Organized in a table where each row corresponds to a different $x$ value, and each column corresponds to a Bessel function of a particular order.
+- A Jupyter notebook that calls functions from mvt_functions.py to process GRB data.
+- Data import and cleaning.
+- Matching and merging data from different GRB databases.
+- Calculations of various time-related parameters for GRBs.
+- Plotting and visualising MVT results using matplotlib.
 
+## Data analaysis of the MVT (plot_data.ipynb`)
+
+- Another Jupyter notebook focused on processing the results obrtained from main.ipynb
+- Detailed data processing and merging steps from independent GRB samples.
+- Calculation of statistical correlations and fits.
+- Advanced plotting and visualisation techniques.
+  
 ## Results
 
 inlcude conclusin in report where say what achived 
 atttache most important plot of mvt90 vs mvt pre
+
+--- 
+
+# *Project Abstract*
+
+*The recent detection of the long-duration, merger originating GRB211211A and GRB230307A has sparked a renewed interest in means to discriminate the progenitor population of GRBs based on their gamma-ray light curve alone. Traditional classification schemes, reliant solely on temporal and spectral properties to group GRBs into long and short bursts associated with stellar collapse and compact binary mergers, respectively, have proven inadequate in accurately discerning these anomalous GRBs. Building upon previous work, we utilise Haar wavelets to measure the variability of the bulk emission and systematically apply the technique in a novel manner to pulses preceding the main event, termed precursors. We find the former analysis of the prompt emission unable to disseminate the anomalous population, whereas the latter study of precursors correctly demonstrates clustering of the anomalies with the short merger population. Therefore, by utilising precursors, our work aids in the accurate classification of GRBs, which is essential for leveraging these bursts to understand star formation, metal enrichment, and the universe’s evolution.*
