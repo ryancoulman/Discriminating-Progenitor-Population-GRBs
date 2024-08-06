@@ -16,7 +16,7 @@ $$
 
 and where $\overline{X}$ is the average natural logarithm of the flux over ∆t consecutive bins, $X$. From this I used `numpy` to fit an $n^{th}$ order polynomial to the data, which typically follows a sigmoidal function, and determined its first derivative maximum between the local minima and maxima to define the minimum variable timescale (MVT) of interest. Short of identifying the best fit polynomial visually, I set up a fully automatic pipeline to compute the MVT of around 100 GRBs.  
 
-The early work analysing the MVT presented in this project provides a promising avenue for discriminating the progenitor source of GRBs, and is currently undergoing further validation for potential publication. This project also received a mark of 80%. 
+The early work analysing the MVT presented in this project provides a promising avenue for discriminating the progenitor source of GRBs, and is currently undergoing further validation for potential publication. This project also received a mark of 80% and you may read the full report titled `Report.pdf`. 
 
 ## Key Concepts Demonstrated
 
@@ -60,11 +60,11 @@ The early work analysing the MVT presented in this project provides a promising 
   
 ## Results
 
-inlcude conclusin in report where say what achived 
-atttache most important plot of mvt90 vs mvt pre
+I found that short-duration bursts have a much smaller precursor (gamma burst preceding the main emmsion) MVT on average than their long-duration counterparts, and importantly, find a strong coupling of the anomalous GRBs (green) with the former. Therefore providing a way to potentially differentiate the two progenitor sources where precursors are available. The plot below shows how one may seperate potential merger orginating bursts (blue) from collapsar dependent ones (red). 
 
---- 
+![Tpre_MVT_vs_T90_MVT](https://github.com/user-attachments/assets/3ff1d764-6e74-4d53-bc6e-034acdab4b94)
 
-# *Project Abstract*
+
+## *More information: Project Abstract*
 
 *The recent detection of the long-duration, merger originating GRB211211A and GRB230307A has sparked a renewed interest in means to discriminate the progenitor population of GRBs based on their gamma-ray light curve alone. Traditional classification schemes, reliant solely on temporal and spectral properties to group GRBs into long and short bursts associated with stellar collapse and compact binary mergers, respectively, have proven inadequate in accurately discerning these anomalous GRBs. Building upon previous work, we utilise Haar wavelets to measure the variability of the bulk emission and systematically apply the technique in a novel manner to pulses preceding the main event, termed precursors. We find the former analysis of the prompt emission unable to disseminate the anomalous population, whereas the latter study of precursors correctly demonstrates clustering of the anomalies with the short merger population. Therefore, by utilising precursors, our work aids in the accurate classification of GRBs, which is essential for leveraging these bursts to understand star formation, metal enrichment, and the universe’s evolution.*
