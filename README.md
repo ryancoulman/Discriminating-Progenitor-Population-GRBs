@@ -21,7 +21,7 @@ The early work analysing the MVT presented in this project provides a promising 
 ## Key Concepts Demonstrated
 
 - **Data Manipulation with Pandas:** Utilises pandas for efficient handling, filtering, and transformation of large datasets (up to 1 million rows).
-- **UNIX Command-Line Tools:** Frequent use of UNIX commands to download GRBs and implemented a Bash script to automate the process for a array of GRB names. 
+- **UNIX Command-Line Tools:** Frequent use of UNIX commands to download GRBs and implemented a Bash script to automate the process for an array of GRB names. 
 - **Scientific Computing with NumPy:** Employs NumPy for numerical calculations, array operations, and fitting of polynomials.
 - **Matplotlib for Data Visualization:**  Uses Matplotlib extensively for plotting data.
 - **Parallel Processing:** Implements joblib's Parallel library for parallel computations, significantly reducing processing time.
